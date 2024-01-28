@@ -19,9 +19,21 @@
     "url": "git+https://github.com/juspay/zephyr-sdk-react.git"
   },
   "main": "dist/index.js",
+  "files": [
+    "dist",
+    "!dist/**/*.test.*",
+    "!dist/**/*.spec.*",
+    "scripts/postinstall.js"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
   "scripts": {
     "dev": "npx tsc --watch",
-    "build": "rollup --config rollup.config.js",
+    "build": "tsc --build",
     "format:all": "npx prettier --write .",
     "lint:all": "eslint . --ext .ts"
   },
@@ -29,7 +41,6 @@
     "@commitlint/cli": "^18.4.2",
     "@commitlint/config-conventional": "^18.4.2",
     "@digitalroute/cz-conventional-changelog-for-jira": "^8.0.1",
-    "@rollup/plugin-typescript": "^11.1.6",
     "@types/react": "^18.2.48",
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "@typescript-eslint/parser": "^6.11.0",
@@ -45,9 +56,8 @@
     "react": "^18.2.0",
     "react-native": "^0.73.2",
     "react-native-webview": "^13.6.4",
-    "rollup": "^4.9.6",
     "tslib": "^2.6.2",
-    "type-decoder": "^1.2.0",
+    "type-decoder": "^2.0.1",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {
