@@ -1,0 +1,152 @@
+{
+  "name": "@juspay/zephyr-sdk-react",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "SDK for integrating Breeze 1CCO into your React Native Application",
+  "keywords": [
+    "react",
+    "react-native",
+    "sdk",
+    "breeze",
+    "1cco",
+    "1CCO",
+    "one click checkout",
+    "one click",
+    "juspay"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juspay/zephyr-sdk-react.git"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "npx tsc --watch",
+    "build": "rollup --config rollup.config.js",
+    "format:all": "npx prettier --write .",
+    "lint:all": "eslint . --ext .ts"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.2",
+    "@commitlint/config-conventional": "^18.4.2",
+    "@digitalroute/cz-conventional-changelog-for-jira": "^8.0.1",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "@types/react": "^18.2.48",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
+    "@typescript-eslint/parser": "^6.11.0",
+    "commitizen": "^4.3.0",
+    "commitlint-config-jira": "^1.6.4",
+    "commitlint-plugin-jira-rules": "^1.6.4",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-standard-with-typescript": "^43.0.1",
+    "husky": "^8.0.3",
+    "prettier": "^3.1.0",
+    "publint": "^0.2.5",
+    "react": "^18.2.0",
+    "react-native": "^0.73.2",
+    "react-native-webview": "^13.6.4",
+    "rollup": "^4.9.6",
+    "tslib": "^2.6.2",
+    "type-decoder": "^1.2.0",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-native": "^0.73.2",
+    "react-native-webview": "^13.6.4"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/@digitalroute/cz-conventional-changelog-for-jira",
+      "jiraPrefix": "BZ",
+      "jiraLocation": "pre-type",
+      "jiraAppend": ":"
+    }
+  },
+  "standard-version": {
+    "skip": {
+      "commit": true,
+      "changelog": true
+    },
+    "types": [
+      {
+        "type": "feat",
+        "section": "Features",
+        "release": "minor"
+      },
+      {
+        "type": "fix",
+        "section": "Bug Fixes",
+        "release": "minor"
+      },
+      {
+        "type": "test",
+        "section": "Tests"
+      },
+      {
+        "type": "build",
+        "section": "Build System"
+      },
+      {
+        "type": "docs",
+        "section": "Documentation"
+      },
+      {
+        "type": "style",
+        "hidden": true
+      },
+      {
+        "type": "refactor",
+        "section": "Improvements"
+      },
+      {
+        "type": "perf",
+        "section": "Improvements"
+      },
+      {
+        "type": "ci",
+        "hidden": true
+      },
+      {
+        "type": "chore",
+        "hidden": true
+      }
+    ],
+    "issuePrefixes": [
+      "BZ-"
+    ],
+    "issueUrlFormat": "https://juspay.atlassian.net/browse/{{prefix}}{{id}}",
+    "commitUrlFormat": "https://github.com/juspay/zephyr-sdk-react/commits/{{hash}}",
+    "compareUrlFormat": "https://github.com/juspay/zephyr-sdk-react/branches/compare/{{currentTag}}%0D{{previousTag}}",
+    "releaseCommitMessageFormat": "chore(release): {{currentTag}} {{prefix}}{{id}}"
+  },
+  "commitlint": {
+    "plugins": [
+      "commitlint-plugin-jira-rules"
+    ],
+    "extends": [
+      "jira"
+    ],
+    "rules": {
+      "jira-task-id-max-length": [
+        0
+      ]
+    }
+  },
+  "auto-changelog": {
+    "output": "docs/CHANGELOG.md",
+    "template": "./docs/templates/changelog.hbs",
+    "commitLimit": false,
+    "breakingPattern": "(!:)",
+    "issueUrl": "https://juspay.atlassian.net/browse/{id}",
+    "issuePattern": "[A-Z]{2,}-\\d+",
+    "compareUrl": "https://github.com/juspay/zephyr-sdk/compare/{to}..{from}",
+    "unreleased": true,
+    "releaseSummary": true,
+    "hideCredit": false,
+    "ignoreCommitPattern": "(\\[skip ci\\])",
+    "replaceText": {
+      "(ABC-\\d+)": "[`$1`](https://juspay.atlassian.net/browse/$1)"
+    }
+  }
+}
