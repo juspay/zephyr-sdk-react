@@ -2,6 +2,8 @@
 
 Zephyr SDK React is a React Native component which enables you to seamlessly integrate and use [Breeze 1 Click Checkout](https://breeze.in/) in your React Native app.
 
+Find the [interactive documentation here](https://juspay.github.io/zephyr-sdk-react/).
+
 ## Installation
 
 In your react native project directory, run the following command:
@@ -41,6 +43,8 @@ import { Zephyr } from '@juspay/zephyr-sdk-react';
 | checkoutPayload | object | Payload object for Zephyr SDK.                                                    |
 | ref             | object | Ref object for Zephyr SDK.                                                        |
 | style           | object | Optional style object for Zephyr SDK. Control the dimensions of the Checkout view |
+
+Extensive documentation for each of the above parameters can be found [here](https://juspay.github.io/zephyr-sdk-react/#md:zephyr-sdk-react)
 
 ### Configuration Object
 
