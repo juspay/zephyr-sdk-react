@@ -35,7 +35,8 @@
     "dev": "npx tsc --watch",
     "build": "tsc --build",
     "format:all": "npx prettier --write .",
-    "lint:all": "eslint . --ext .ts"
+    "lint:all": "eslint . --ext .ts",
+    "generate:doc": "npx typedoc src/index.tsx"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.2",
@@ -58,6 +59,7 @@
     "react-native-webview": "^13.6.4",
     "tslib": "^2.6.2",
     "type-decoder": "^2.0.1",
+    "typedoc": "^0.25.7",
     "typescript": "^5.2.2"
   },
   "peerDependencies": {

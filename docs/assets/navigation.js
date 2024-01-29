@@ -1,0 +1,2 @@
+window.navigationData =
+  'data:application/octet-stream;base64,H4sIAAAAAAAAE5XTQW+CMBTA8e/yzmRTs82Mq+GskWSHLR5qfYyG2pL24UYWv7vRjA1JK89z//zaAu/jBwi/CVJ4x7ps3UJovRWy8pBALaiEFKit0T8Olh9K2mtIoFJmB+ls8jqfPs+OyVArUVa2obyREr3PDmgoAgdK5h7WFOqzcYKUNRG8n/DUzByUs2YfPXAvYIrxy99x26VZaOux+w5hbxBx5cw568bkq+gu+cYL6Bds8xyPnrYfceXff3DMHmQ8feVsHZmtyxJPWWMRNtZY8ISchKNu6Fai1VbswmSo5O3xpvArp1ZjGP5b5mn/SNEYeZ7kDrp+/uXpuDkBW2oM+9YEAAA=';
